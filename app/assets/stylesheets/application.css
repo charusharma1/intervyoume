@@ -1,0 +1,33 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require theme/bootstrap.min
+ *= require theme/smoothness.jquery-ui
+ *= require font-awesome
+ *= require theme/owl.carousel
+ *= require theme/animate
+ *= require theme/color-switcher
+ *= require theme/dragtable
+ *= require theme/custom
+ *= require theme/blue
+ *= require theme/brown
+ *= require theme/dark-blue
+ *= require theme/dark-red
+ *= require theme/green
+ *= require theme/light-green
+ *= require theme/orange
+ *= require theme/purple
+ *= require theme/red
+ *= require theme/yellow
+ *= require_tree .
+ *= require_self
+ */
