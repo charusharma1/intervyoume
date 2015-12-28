@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
-  get "/", to: 'pages#index'
+  devise_for :users
+  root to: "appointments#index"
+  
+  get '/appointments', to: 'appointments#index'
+  get '/appointments/new', to: 'appointments#new'
+  post '/appointments', to: 'appointments#create'
+  get '/appointments/:id', to: 'appointments#show'
+  get '/appointments/:id/edit', to: 'appointments#edit'
+  patch '/appointments/:id', to: 'appointments#update' 
+  delete '/appointments/:id', to: 'appointments#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

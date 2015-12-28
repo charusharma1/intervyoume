@@ -1,0 +1,46 @@
+
+<section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+      <div class="row">
+        <ul class="pull-right view-choice">
+          <li><%= link_to "Show Software Engineers", "/appointments?job_function=software_engineering" %></li>
+          <li><%= link_to "Show Consultants", "/appointments?job_function=consulting" %></li>
+          <li><%= link_to "Show Priced Highest to Lowest", "/appointments?job_function=investment_banking" %></li>
+          <li><%= link_to "I'm feeling lucky", "/appointments/random" %></li>
+          <li><%= link_to "Show All", "/appointments" %></li>
+          <% @appointments.each do |appointment| %>
+            <li><%= link_to "#{job_function} professionals", "/appointments?job_function=#{job_function}" %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="row">
+      
+      <!--Make magic happen here Ruby!-->
+
+
+      <% @appointments.each do |user| %>
+
+        <div class="col-sm-4">
+            <h2><a href="/users/<%= user.id %>" title="View User">Name: <%= user.first_name %><%= user.last_name %></a></h2>
+            <li>Job function: <%= user.job_function %></li>
+            <li>Hourly Rate: <%= user.hourly_rate %></li>
+            <li>Rating: <span class="rating"><%= user.rating %></span></li>
+        </div>
+      <% end %>
+      <!--Magic ends-->
+
+      </div>
+    </section>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <%= link_to "Create new appointment", "appointments/new" %>

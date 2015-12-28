@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jobseeker_id: 1
+  expert_id: 1
+  appointment_time: 2015-12-20 16:34:40
+  appointment_channel: MyString
+
+two:
+  jobseeker_id: 1
+  expert_id: 1
+  appointment_time: 2015-12-20 16:34:40
+  appointment_channel: MyString
