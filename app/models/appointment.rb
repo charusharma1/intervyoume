@@ -1,16 +1,16 @@
 class Appointment < ActiveRecord::Base
   has_many :users
 
-  def self.get_software_engineering
-    Appointment.where("job_function", "software engineering")
+  def self.get_web_dev
+    Appointment.where("job_function", "web dev")
   end
 
-  def self.get_consulting
-    Appointment.where("job_function", "consulting")
+  def self.get_design
+    Appointment.where("job_function", "design")
   end
 
-  def self.get_investment_banking
-    Appointment.where("job_function", "investment banking")
+  def self.get_sales
+    Appointment.where("job_function", "sales")
   end
 
 end

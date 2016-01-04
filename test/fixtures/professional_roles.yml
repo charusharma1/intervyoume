@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  years_of_experience: 1
+  company: MyString
+
+two:
+  title: MyString
+  years_of_experience: 1
+  company: MyString

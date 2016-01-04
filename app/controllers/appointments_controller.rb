@@ -1,4 +1,6 @@
 class AppointmentsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
       if params[:job_function] == "software engineering"
       @appointments = Appointment.get_software_engineering
