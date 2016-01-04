@@ -2,12 +2,12 @@ class AppointmentsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-      if params[:job_function] == "software engineering"
-      @appointments = Appointment.get_software_engineering
-    elsif params[:job_function] == "consulting"
-      @appointments = Appointment.get_consulting
-    elsif params[:job_function] == "investment banking"
-      @appointments = Appointment.get_investment_banking
+      if params[:job_function] == "web dev"
+      @appointments = Appointment.get_web dev
+    elsif params[:job_function] == "design"
+      @appointments = Appointment.get_design
+    elsif params[:job_function] == "sales"
+      @appointments = Appointment.get_sales
     elsif params[:job_function]
       @appointments = Appointment.find_by(job_function: params[:job_function]).appointments
     else

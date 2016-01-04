@@ -1,0 +1,2 @@
+class ProfessionalRolesController < ApplicationController
+end

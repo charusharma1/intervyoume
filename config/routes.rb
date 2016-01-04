@@ -11,6 +11,30 @@ Rails.application.routes.draw do
   patch '/appointments/:id', to: 'appointments#update' 
   delete '/appointments/:id', to: 'appointments#destroy'
 
+  get '/users', to: 'users#index'
+  get '/users/new', to: 'users#new'
+  post '/users', to: 'users#create'
+  get '/users/:id', to: 'users#show'
+  get '/users/:id/edit', to: 'users#edit'
+  patch '/users/:id', to: 'users#update' 
+  delete '/users/:id', to: 'users#destroy'
+
+  get '/skills', to: 'skills#index'
+  get '/skills/new', to: 'skills#new'
+  post '/skills', to: 'skills#create'
+  get '/skills/:id', to: 'skills#show'
+  get '/skills/:id/edit', to: 'skills#edit'
+  patch '/skills/:id', to: 'skills#update' 
+  delete '/skills/:id', to: 'skills#destroy'
+
+  get '/professioanal_roles', to: 'professioanal_roles#index'
+  get '/professioanal_roles/new', to: 'professioanal_roles#new'
+  post '/professioanal_roles', to: 'professioanal_roles#create'
+  get '/professioanal_roles/:id', to: 'professioanal_roles#show'
+  get '/professioanal_roles/:id/edit', to: 'professioanal_roles#edit'
+  patch '/professioanal_roles/:id', to: 'professioanal_roles#update' 
+  delete '/professioanal_roles/:id', to: 'professioanal_roles#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
