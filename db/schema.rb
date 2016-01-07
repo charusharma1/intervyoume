@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103215426) do
+ActiveRecord::Schema.define(version: 20160107051741) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer  "jobseeker_id",        limit: 4
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160103215426) do
     t.string   "company",             limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id",             limit: 4
   end
 
   create_table "skills", force: :cascade do |t|
@@ -73,7 +74,6 @@ ActiveRecord::Schema.define(version: 20160103215426) do
     t.decimal  "hourly_rate",                          precision: 6, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "professional_role_id",   limit: 4
     t.text     "last_name",              limit: 65535
     t.boolean  "if_expert"
   end

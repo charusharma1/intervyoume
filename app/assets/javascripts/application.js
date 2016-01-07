@@ -12,6 +12,7 @@
 //
 //= require theme/jquery_11.1
 //= require theme/jquery_ui_1.11.1
+//= require jquery_ujs
 //= require theme/google_maps_api
 //= require theme/bootstrap.min
 //= require theme/bootstrap-hover-dropdown.min

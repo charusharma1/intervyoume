@@ -1,47 +1,506 @@
 
-<section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-    <div class="row">
-        <ul class="pull-right view-choice">
-          <li><%= link_to "Show Web Developers", "/appointments?job_function=web_dev" %></li>
-          <li><%= link_to "Show Designers", "/appointments?job_function=design" %></li>
-          <li><%= link_to "Show Sales professionals", "/appointments?job_function=sales" %></li>
-          <li><%= link_to "Show Priced Highest to Lowest", "/appointments?job_function=investment_banking" %></li>
-          <li><%= link_to "I'm feeling lucky", "/appointments/random" %></li>
-          <li><%= link_to "Show All", "/appointments" %></li>
-          <% @appointments.each do |appointment| %>
-            <li><%= link_to "#{job_function} professionals", "/appointments?job_function=#{job_function}" %></li>
-          <% end %>
-        </ul>
-      </div>
-      <div class="row">
-       
-      <!--Make magic happen here Ruby!-->
-
-
-      <% @appointments.each do |user| %>
-
-        <div class="col-sm-4">
-            <h2><a href="/users/<%= user.id %>" title="View User">Name: <%= user.first_name %><%= user.last_name %></a></h2>
-            <li>Job function: <%= user.job_function %></li>
-            <li>Hourly Rate: <%= user.hourly_rate %></li>
-            <li>Rating: <span class="rating"><%= user.rating %></span></li>
+    <!-- ==========================
+        JUMBOTRON - START 
+    =========================== -->
+    <section class="content jumbotron jumbotron-full-height">
+        <div id="homepage-2-carousel" class="nav-inside">
+            
+            <div class="item slide-1">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                        <h1 class="color-background">Looking for your dream job?</h1>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="" class="btn btn-default btn-lg">Sign Up</a>
+                        <a href="" class="btn btn-inverse btn-lg">Sign in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item slide-2">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                        <h1 class="grey-background">Looking for your dream job?</h1>
+                        <div><h2 class="color-background">Nervous about your big interview?</h2></div>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-check"></i>In 2015 alone, <b>1.9 million students</b> graduated from US colleges.</li>
+                            <li><i class="fa fa-check"></i>An average of <b>250 resumes</b> are received for every corporate job opening.</li>
+                            <li><i class="fa fa-check"></i>33% of recruiters make up their minds within the <b>first 90 seconds</b> of the interview.</li>  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                        
         </div>
-      <% end %>
-      <!--Magic ends-->
-
-      </div>
     </section>
-    <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-    <%= link_to "Create new appointment", "appointments/new" %>
+    <!-- ==========================
+      JUMBOTRON - END 
+    =========================== -->
+
+
+    <!-- ==========================
+      SERVICES - START 
+    =========================== -->
+    <section class="content services services-3x border-top border-bottom">
+        <div class="container">
+          <div class="row row-no-padding">
+            
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-graduation-cap"></i>
+                        <p><h3>In 2015 alone, 1.9 million students graduated from US colleges.</h3></p> 
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+                
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-group"></i>
+                        <p><h3>An average of 250 resumes are received for every corporate job opening.</h3></p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+                
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-hourglass-start"></i>
+                        <p><h3>33% of recruiters make up their minds within the first 90 seconds of the interview.</h3></p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- ==========================
+      SERVICES - END 
+    =========================== -->
+    
+    <!-- ==========================
+      NOTIFICATION - START 
+    =========================== -->
+    <section class="content pattern notification">
+        <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                    <span>Practice interviews in real time with a real person!</span>
+                    <a href="#" class="btn btn-default btn-lg">Find an expert</a>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+     <!-- ==========================
+      NOTIFICATION - END 
+    =========================== -->
+    <!-- ==========================
+      CATEGORIES - START 
+    =========================== -->
+    <section class="content categories">
+        <div class="row row-no-padding">
+        
+            <!-- CATEGORY - START -->
+            <div class="col-xs-4">
+                <div class="category">
+                    <a href="products.html">
+                        <%= image_tag "theme/categories/category-2.jpg" %>
+                        <div class="category-mask"></div>
+                        <h3 class="category-title">Web Dev <span>Professionals</span></h3>
+                    </a>
+                </div>
+            </div>
+            <!-- CATEGORY - END -->
+            
+            <!-- CATEGORY - START -->
+            <div class="col-xs-4">
+                <div class="category">
+                    <a href="products.html">
+                       <%= image_tag "theme/categories/category-3.jpg" %>
+                        <div class="category-mask"></div>
+                        <h3 class="category-title">Design<span>Professionals</span></h3>
+                    </a>
+                </div>
+            </div>
+            <!-- CATEGORY - END -->
+            
+            <!-- CATEGORY - START -->
+            <div class="col-xs-4">
+                <div class="category">
+                    <a href="products.html">
+                       <%= image_tag "theme/categories/category-4.jpg" %>
+                        <div class="category-mask"></div>
+                        <h3 class="category-title">Sales <span>Professionals</span></h3>
+                    </a>
+                </div>
+            </div>
+            <!-- CATEGORY - END -->
+                            
+        </div>
+        
+    </section>
+    <!-- ==========================
+      CATEGORIES - END 
+    =========================== -->
+
+     <!-- ==========================
+      GRID PRODUCTS - START 
+    =========================== -->
+    <section class="content grid-products border-top">
+        <div class="container">
+           <div class="row">
+              
+              <!--   <div class="col-xs-6 col-sm-3">
+                    <article class="product-item">
+                        <%= image_tag "theme/products/product-1.jpg" %>
+                        <h3><a href="single-product.html">Moss Mernagh</a><br>
+                        Software Engineer, Google</h3>
+                        <div class="product-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <span class="price">  
+                        <span class="amount">Hourly rate: </span>
+                         <del><span class="amount">$36.00</span></del>      
+                            <ins><span class="amount">$30.00</span></ins>
+                        </span>
+                    </article>
+                </div>
+                
+                <div class="col-xs-6 col-sm-3">
+                    <article class="product-item">
+                       <%= image_tag "theme/products/product-2.jpg" %>
+                        <h3><a href="single-product.html">Charu Sharma</a><br>
+                        Sales, LinkedIn</h3>
+                        <div class="product-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <span class="price">  
+                        <span class="amount">Hourly rate: </span>
+                         <del><span class="amount">$36.00</span></del>      
+                            <ins><span class="amount">$30.00</span></ins>
+                        </span>
+                    </article>
+                </div> -->
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-1.jpg" %>
+                              <h3>Moss Mernagh <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-2.jpg" %>
+                              <h3>Charu Sharma <br> Sales, LinkedIn</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                    </ul>
+                    
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-1.jpg" %>
+                              <h3>Moss Mernagh <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-2.jpg" %>
+                              <h3>Charu Sharma <br> Sales, LinkedIn</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                    </ul>
+                    
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-1.jpg" %>
+                              <h3>Moss Mernagh <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-2.jpg" %>
+                              <h3>Charu Sharma <br> Sales, LinkedIn</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                    </ul>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-1.jpg" %>
+                              <h3>Anup Mantri <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="single-product.html">
+                              <%= image_tag "theme/products/product-3.jpg" %>
+                              <h3>Davide Cerri <br> Software Engineer, Airbnb</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                    </ul>
+                    
+                </div>
+             </div>       
+        </div>
+    </section>
+    <!-- ==========================
+      GRID PRODUCTS - END 
+    =========================== -->
+    
+    
+    <!-- ==========================
+      RECENT BLOG POSTS - START 
+    =========================== -->
+    <section class="content recent-blog-posts">
+        <div class="container">
+          <div class="section-title">
+                <h2>Useful online resources</h2>
+                <p>We highly recommend reading the following articles.</p>
+            </div>
+          <div class="row">
+              
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <%= image_tag "theme/blog/blog-1.jpg" %>
+                        <h3><a href="https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success">The Ultimate Interview Guide: 30 Prep Tips for Job Interview Success</a></h3>
+                        <span class="date">The Daily Muse</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <%= image_tag "theme/blog/blog-2.jpg" %>
+                        <h3><a href="https://www.glassdoor.com/blog/common-interview-questions/">50 Most Common Interview Questions, compiled by Glassdoor team</a></h3>
+                        <span class="date">Glassdoor blog</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <%= image_tag "theme/blog/blog-3.jpg" %>
+                        <h3><a href="http://blog.linkedin.com/2015/09/01/the-hiring-secrets-of-richard-branson-apples-angela-ahrendts-other-top-managers/">The Hiring Secrets of Richard Branson, Apple’s Angela Ahrendts & Other Top Managers</a></h3>
+                        <span class="date">LinkedIn.com</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <%= image_tag "theme/blog/blog-4.jpg" %>
+                        <h3><a href="http://www.quintcareers.com/star-interviewing/">STAR Interviewing Response Technique for Success in Behavioral Job Interviews</a></h3>
+                        <span class="date">Quint Careers</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+            </div>
+        </div>
+    </section>
+     <!-- ==========================
+      RECENT BLOG POSTS - END 
+    =========================== -->
+    
+    <!-- ==========================
+      NOTIFICATION - START 
+    =========================== -->
+    <section class="content pattern notification">
+        <div class="container">
+          <div class="row">
+              
+                <div class="col-sm-12">
+                    <h3>How Intervyou.me was founded?</h3>
+                    <p>"As a college senior in 2013, I was thrilled when I made it to the final interview at a top trading firm for a six figure salary. Sadly, I failed the interview and didn't get the offer. I realized that I hadn't prepared enough, because I didn't know whom to practice with, and that my college friends were in the same boat. I really wanted to make this app for other job seekers to find experts and peers to prep with, and get their dream job."</p><p>
+                    <a href="https://www.linkedin.com/in/charusharma1"><i>-Charu Sharma, Founder of Intervyou.me</i></a></p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- ==========================
+      NOTIFICATION - END 
+    =========================== -->
+    
+    <!-- ==========================
+      BRANDS - START 
+    =========================== -->
+    <section class="content brands pattern border-top border-bottom">
+        <div class="container">
+          <div id="brands-carousel">
+              <div class="item"><a href="lookbook.html">
+                <%= image_tag "theme/clients/1.png" %>
+                </a></div>
+                <div class="item"><a href="lookbook.html">
+                <%= image_tag "theme/clients/2.png" %>
+                </a></div>
+                <div class="item"><a href="lookbook.html">
+                <%= image_tag "theme/clients/3.png" %>
+                </a></div>
+                <div class="item"><a href="lookbook.html">
+                <%= image_tag "theme/clients/4.png" %>
+                </a></div>
+                <div class="item"><a href="lookbook.html">
+                <%= image_tag "theme/clients/5.png" %>
+                </a></div>
+                <div class="item"><a href="lookbook.html">
+                <%= image_tag "theme/clients/6.png" %>
+                </a></div>
+                <div class="item"><a href="lookbook.html">
+                <%= image_tag "theme/clients/7.png" %>
+                </a></div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========================
+      BRANDS - END 
+    =========================== -->
+
