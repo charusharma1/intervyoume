@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: "appointments#index"
+
   
   get '/appointments', to: 'appointments#index'
   get '/appointments/new', to: 'appointments#new'
@@ -16,6 +17,12 @@ Rails.application.routes.draw do
   get '/profiles/:id', to: 'profiles#search'
   get '/profiles/:id/edit', to: 'profiles#edit'
   patch '/profiles/:id', to: 'profiles#update' 
+  namespace :api do
+      namespace :v1 do
+        resources :profiles 
+    get '/profiles/search', to: 'profiles#search'
+      end
+    end
 
 
   get '/skills', to: 'skills#index'

@@ -23,4 +23,5 @@
 //= require theme/twitterFetcher_min
 //= require theme/color-switcher
 //= require theme/custom
+//= require angular
 //= require_tree .

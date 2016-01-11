@@ -1,13 +1,44 @@
-<h1>Experts: </h1>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 
-<table class="table table-striped">
-  <% @profiles.each do |profile| %>
-  <tr>
-    <td><%= profile.full_name %></td>
-    <td><%= profile.email %></td>
-  </tr>
-  <% end %>
-</table>
+<div ng-app="app">
+  <div ng-controller="profilesCtrl" ng-init="setup()" >
+    
+    <div>
+    {{profiles.length}} users
+    </div>
+
+    <datalist id="full_names">
+      <option ng-repeat="profile in profiles">{{profile.full_name}} </option>
+    </datalist>
+
+
+    <input ng-model="nameFilter" list="full_names">
+    
+    <table class="table table-striped">
+      
+      <tr>
+        <th><button ng-click="toggleOrder('name')">Name</button></th>
+        <th><button ng-click="toggleOrder('email')">Email</button></th>
+        <th><button ng-click="toggleOrder('title')">Title</button></th>
+        <th><button ng-click="toggleOrder('company')">Company</button></th>
+      </tr>
+      
+      <tr ng-repeat="profile in profiles | filter: {full_name: nameFilter} | orderBy:orderAttribute:direction">
+        <td><a href="/profiles/{{profile.id}}">{{ profile.full_name}}</a></td>
+        <td>{{profile.email}}</td>
+        <td>{{profile.professional_roles[0].title}}</td>
+        <td>{{profile.professional_roles[0].company}}</td>
+      </tr>
+
+    </table>
+    
+  </div>
+</div>
+
