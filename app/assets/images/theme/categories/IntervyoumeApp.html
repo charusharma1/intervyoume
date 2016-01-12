@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <title>IntervyoumeApp</title>
+
+  <link rel="stylesheet" media="all" href="./IntervyoumeApp_files/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/smoothness.jquery-ui.self-b0293d6fab43092ee81f4d19605c2a9d9fac9394887898cac317f9ae3526b31b.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/font-awesome.self-0a2eb42e5253134fe106e7859b8d1d0d91d92652bd59975e92401967a2fb915c.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/owl.carousel.self-7b3c64966f04ea438948f66dd75b763e7d2675239f8d567313921f80d3a91bf9.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/animate.self-fea0ded26e143f826bc21f4dd76856675b5d1f31eb180436449a03e52401c21b.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/color-switcher.self-dfb7bfa45ffd7130136623efb01a688551a6da27913ed6106513bb83464b000e.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/dragtable.self-68bb663d7d60c761c2ba6c9246033a43af88d20aa102f9c3368bfbc0824653b2.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/custom.self-fb801fbda9245d644683ca9304b710a55689248ac962311111127c4a595cedb0.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/green.self-3c9cd43cd8828e5e797977e17187c1669392d13d58259cee145f035073c41985.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/profiles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/appointments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/professional_roles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/profiles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855(1).css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./IntervyoumeApp_files/application.self-61fcff3ba98a184c726b0520780c17580fdd82fdd11d11b738e81e07b117cd4f.css" data-turbolinks-track="true">
+  <script src="./IntervyoumeApp_files/jquery_11.1.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/jquery_ui_1.11.1.self-e54664ce242c0b45f31968058b0f61cb14ca424e1392b1f71f5353d21520ffda.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/google_maps_api.self-8644917a353cf7ff87aef33ab09fbcbfe5da4bea70722a3dd6e451c600c9a435.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/bootstrap-hover-dropdown.min.self-ce3aae199666794da0bfc25a58d035f48558f1ff552ef08b2368eb1523b90a7a.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/SmoothScroll.self-161fa59a4ad3797f9e295ca3aecf59fc86b01a20500a91bcd53214987dee683b.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/jquery.dragtable.self-c2c3d8f0c73e4c5fc1d231bfe121a7a51004f624c245fd436befb9d25de084b5.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/jquery.card.self-a5703d2d7e7a3b1913cf4dbeb3e9e0ddee14dc88bd57c12402a9006a9cb834dc.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/owl.carousel.min.self-3c9f9dac2a281d1090601a8896fe59fb9df20f261295bbe087f2a0f56ef7e8d9.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/twitterFetcher_min.self-b6e295c178c06d68148c68d9f380aaada104a3e77046c96e4daae3ca943e90a4.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/color-switcher.self-a16ef08a10c8a1e688f89b0b1daffe058825641553d6449b64ab1cd27158ec1c.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/custom.self-7b576a05200361e46aca64a4c962a292ab7f7374c6b215023e4ec06aa6cbe6e6.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/angular.self-18ed6e3e6d73916b601437a1a55d05720404abbc82aae372357fbdb994a7e720.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/app.self-a2e41a08cf0c3ce57ce350a1344a8b50fb1d3d1599c3ca619cbd61355d5717c4.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/appointments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/professional_roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05(1).js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/profiles_ctrl.self-fdb7eef6e532a4154b83414189c87d845496660bacb89b39b958aaeaa58fcba9.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="true"></script>
+<script src="./IntervyoumeApp_files/application.self-e5d5cca64271c4c8ebd7d72a4e34c6eb16e8f036b14a575d09fa3fbb5df6f25e.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="E6OgPHowy4vDsqXI7fZBPlPTs0+IuiIvdtWgnkO3Z2CUMtbpQ1wdgLCfSd7SOtNgMeA7BIBGvd1RCdN1Y8lh0g==">
+  <link href="./IntervyoumeApp_files/css" rel="stylesheet" type="text/css">
+  <link href="./IntervyoumeApp_files/css(1)" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./IntervyoumeApp_files/541286991938457600"></script><script type="text/javascript" charset="UTF-8" src="./IntervyoumeApp_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./IntervyoumeApp_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./IntervyoumeApp_files/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./IntervyoumeApp_files/AuthenticationService.Authenticate"></script></head>
+<body>
+  
+    <!-- ==========================
+      SCROLL TOP - START 
+    =========================== -->
+    <div id="scrolltop" class="hidden-xs in"><i class="fa fa-angle-up"></i></div>
+    <!-- ==========================
+      SCROLL TOP - END 
+    =========================== -->
+    
+  <!-- ==========================
+      COLOR SWITCHER - START 
+    =========================== -->
+  <div id="color-switcher">
+        <div id="toggle-switcher"><i class="fa fa-gear"></i></div>
+        <span>Color Scheme:</span>
+        <ul class="list-unstyled list-inline">
+            <li id="red" data-toggle="tooltip" data-placement="top" title="" data-original-title="Red"></li>
+            <li id="purple" data-toggle="tooltip" data-placement="top" title="" data-original-title="Purple"></li>
+            <li id="yellow" data-toggle="tooltip" data-placement="top" title="" data-original-title="Yellow"></li>
+            <li id="blue" data-toggle="tooltip" data-placement="top" title="" data-original-title="Blue"></li>
+            <li id="dark-blue" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dark Blue"></li>
+            <li id="orange" data-toggle="tooltip" data-placement="top" title="" data-original-title="Orange"></li>
+            <li id="green" data-toggle="tooltip" data-placement="top" title="" data-original-title="Green"></li>
+            <li id="brown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Brown"></li>
+            <li id="dark-red" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dark Red"></li>
+            <li id="light-green" data-toggle="tooltip" data-placement="top" title="" data-original-title="Light Green"></li>
+        </ul>
+    </div>
+  <!-- ==========================
+      COLOR SWITCHER - END 
+    =========================== -->
+    
+    <div id="page-wrapper"> <!-- PAGE - START -->
+
+  
+  <!-- ==========================
+      HEADER - START 
+    =========================== -->
+  <div class="top-header hidden-xs hidden">
+      <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <ul class="list-inline contacts">
+                        <li><i class="fa fa-envelope"></i> help@umarket.com</li>
+                        <li><i class="fa fa-phone"></i> 754 213 456</li>
+                    </ul>
+                </div>
+                <div class="col-sm-7 text-right">
+                    <ul class="list-inline links">
+                        <li><a href="http://localhost:3000/my-account.html">My account</a></li>
+                        <li><a href="http://localhost:3000/checkout.html">Checkout</a></li>
+                        <li><a href="http://localhost:3000/wishlist.html">Wishlist (5)</a></li>
+                        <li><a href="http://localhost:3000/compare.html">Compare (3)</a></li>
+                        <li><a href="http://localhost:3000/signin.html">Logout</a></li>
+                    </ul>
+                    <ul class="list-inline languages hidden-sm">
+                      <li>
+                        <a href="http://localhost:3000/#">
+                        <img src="./IntervyoumeApp_files/cz-0f39366d88fabe6f6f5c7a3cb6a11165de6bc6bc2108802c49df5f9840bc6541.png" alt="Cz 0f39366d88fabe6f6f5c7a3cb6a11165de6bc6bc2108802c49df5f9840bc6541"></a></li>
+                        <!-- <img src="assets/images/flags/cz.png" alt="cs_CZ">
+                         -->
+
+                        <li><a href="http://localhost:3000/#">
+                        <img src="./IntervyoumeApp_files/us-36cce5cae3d2e0045b2b2b6cbffdad7a0aba3e99919cc219bbf0578efdc45585.png" alt="Us 36cce5cae3d2e0045b2b2b6cbffdad7a0aba3e99919cc219bbf0578efdc45585"></a></li>
+                        <!-- <img src="assets/images/flags/us.png" alt="en_US"> -->
+                        <li><a href="http://localhost:3000/#"><img src="./IntervyoumeApp_files/de-3323814006fe6739493d27057954941830b59eff37ebaac994310e17c522dd57.png" alt="De 3323814006fe6739493d27057954941830b59eff37ebaac994310e17c522dd57"></a></li>
+                       <!--  <img src="assets/images/flags/de.png" alt="de_DE"> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <li><a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">Sign out</a></li>
+        <li><a>charu1603@gmail.com is signed in</a></li>
+            <div class="navbar-header">
+                <a href="http://localhost:3000/index.html" class="navbar-brand"><span>Interv</span>you.me</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="navbar-collapse collapse">
+              <p class="navbar-text hidden-xs hidden-sm">Practice mock interviews with industry experts and peers</p>
+              <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="http://localhost:3000/#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">About</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="http://localhost:3000/index.html">Homepage</a></li>
+                            <li><a href="http://localhost:3000/homepage-2.html">About Us</a></li>
+                            <li><a href="http://localhost:3000/homepage-3.html">Careers<span class="label label-danger pull-right">SOON</span></a></li>
+                            <li><a href="http://localhost:3000/homepage-4.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="http://localhost:3000/#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Practice with</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://localhost:3000/appointments?job_function=web_dev">Web Developers</a></li>
+                            <li><a href="http://localhost:3000/appointments?job_function=design">Designers</a></li>
+                            <li><a href="http://localhost:3000/appointments?job_function=sales">Sales professionals</a></li>
+                            <li><a href="http://localhost:3000/appointments">All professionals</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown megamenu">
+                      <a href="http://localhost:3000/#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li class="col-sm-4">
+                              <ul class="list-unstyled">
+                                  <li class="title">Eshop</li>
+                                    <li><a href="http://localhost:3000/products.html">Products</a></li>
+                                    <li><a href="http://localhost:3000/cart.html">Cart</a></li>
+                                    <li><a href="http://localhost:3000/checkout.html">Checkout</a></li>
+                                    <li><a href="http://localhost:3000/compare.html">Compare</a></li>
+                                    <li><a href="http://localhost:3000/single-product.html">One Product</a></li>
+                                    <li><a href="http://localhost:3000/stores.html">Stores</a></li>
+                                    <li><a href="http://localhost:3000/about-shop.html">About Shop</a></li>
+                                    <li><a href="http://localhost:3000/lookbook.html">Lookbook</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-4">
+                              <ul class="list-unstyled">
+                                  <li class="title">Account</li>
+                                    <li><a href="http://localhost:3000/my-account.html">My Account</a></li>
+                                    <li><a href="http://localhost:3000/profile.html">Profile</a></li>
+                                    <li><a href="http://localhost:3000/orders.html">Ordres</a></li>
+                                    <li><a href="http://localhost:3000/wishlist.html">Wishlist</a></li>
+                                    <li><a href="http://localhost:3000/address.html">Address</a></li>
+                                    <li><a href="http://localhost:3000/signup.html">Sign Up</a></li>
+                                    <li><a href="http://localhost:3000/signin.html">Sign In</a></li>
+                                    <li><a href="http://localhost:3000/lost-password.html">Lost Password</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-4">
+                              <ul class="list-unstyled">
+                                  <li class="title">Other Pages</li>
+                                    <li><a href="http://localhost:3000/blog.html">Blog</a></li>
+                                    <li><a href="http://localhost:3000/single-post.html">One Blog Post</a></li>
+                                    <li><a href="http://localhost:3000/single-order.html">Order Detail</a></li>
+                                    <li><a href="http://localhost:3000/faq.html">FAQ</a></li>
+                                    <li><a href="http://localhost:3000/privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="http://localhost:3000/terms-conditions.html">Terms &amp; Conditions</a></li>
+                                    <li><a href="http://localhost:3000/404.html">404 Error</a></li>
+                                    <li><a href="http://localhost:3000/email-template.html" target="_blank">Email Template</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown navbar-cart hidden-xs">
+                      <a href="http://localhost:3000/#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true"><i class="fa fa-shopping-cart"></i></a>
+                        <ul class="dropdown-menu">
+                          
+                            <!-- CART ITEM - START -->
+                            <li>
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                      <img src="./IntervyoumeApp_files/product-1-c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2.jpg" alt="Product 1 c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2">
+                                    </div>
+                                    <div class="col-sm-9">
+                                      <h4><a href="http://localhost:3000/single-product.html">Fusce Aliquam</a></h4>
+                                        <p>1x - $20.00</p>
+                                      <a href="http://localhost:3000/#" class="remove"><i class="fa fa-times-circle"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- CART ITEM - END -->
+                            
+                            <!-- CART ITEM - START -->
+                            <li>
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                      <img src="./IntervyoumeApp_files/product-2-07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5.jpg" alt="Product 2 07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5">
+                                    </div>
+                                    <div class="col-sm-9">
+                                      <h4><a href="http://localhost:3000/single-product.html">Fusce Aliquam</a></h4>
+                                        <p>1x - $20.00</p>
+                                      <a href="http://localhost:3000/#" class="remove"><i class="fa fa-times-circle"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- CART ITEM - END -->
+                            
+                            <!-- CART ITEM - START -->
+                            <li>
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                      <img src="./IntervyoumeApp_files/product-3-b8c8258253517fbb8d689f8d7543dad3d2ab29ebae06458ce081422214ee7029.jpg" alt="Product 3 b8c8258253517fbb8d689f8d7543dad3d2ab29ebae06458ce081422214ee7029">
+                                    </div>
+                                    <div class="col-sm-9">
+                                      <h4><a href="http://localhost:3000/single-product.html">Fusce Aliquam</a></h4>
+                                        <p>1x - $20.00</p>
+                                      <a href="http://localhost:3000/#" class="remove"><i class="fa fa-times-circle"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- CART ITEM - END -->
+                            
+                            <!-- CART ITEM - START -->
+                            <li>
+                              <div class="row">
+                                  <div class="col-sm-6">
+                                      <a href="http://localhost:3000/cart.html" class="btn btn-primary btn-block">View Cart</a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                      <a href="http://localhost:3000/checkout.html" class="btn btn-primary btn-block">Checkout</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- CART ITEM - END -->
+                            
+                        </ul>
+                    </li>
+                    <li class="dropdown navbar-search hidden-xs">
+                      <a href="http://localhost:3000/#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                        <ul class="dropdown-menu">
+                          <li>
+                                <form>
+                                    <div class="input-group input-group-lg">
+                                        <input type="email" class="form-control" placeholder="Search ...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary" type="button">Search</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================
+        JUMBOTRON - START 
+    =========================== -->
+    <section class="content jumbotron jumbotron-full-height">
+        <div id="homepage-2-carousel" class="nav-inside owl-carousel owl-theme owl-loaded">
+            
+            
+            
+                        
+        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-4320px, 0px, 0px); transition: 0s; width: 8640px;"><div class="owl-item cloned" style="width: 1440px; margin-right: 0px;"><div class="item slide-1">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                        <h1 class="color-background">Looking for your dream job?</h1>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="" class="btn btn-default btn-lg">Sign Up</a>
+                        <a href="" class="btn btn-inverse btn-lg">Sign in</a>
+                    </div>
+                </div>
+            </div></div><div class="owl-item cloned" style="width: 1440px; margin-right: 0px;"><div class="item slide-2">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                        <h1 class="grey-background">Looking for your dream job?</h1>
+                        <div><h2 class="color-background">Nervous about your big interview?</h2></div>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-check"></i>In 2015 alone, <b>1.9 million students</b> graduated from US colleges.</li>
+                            <li><i class="fa fa-check"></i>An average of <b>250 resumes</b> are received for every corporate job opening.</li>
+                            <li><i class="fa fa-check"></i>33% of recruiters make up their minds within the <b>first 90 seconds</b> of the interview.</li>  
+                        </ul>
+                    </div>
+                </div>
+            </div></div><div class="owl-item" style="width: 1440px; margin-right: 0px;"><div class="item slide-1">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                        <h1 class="color-background">Looking for your dream job?</h1>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="" class="btn btn-default btn-lg">Sign Up</a>
+                        <a href="" class="btn btn-inverse btn-lg">Sign in</a>
+                    </div>
+                </div>
+            </div></div><div class="owl-item active" style="width: 1440px; margin-right: 0px;"><div class="item slide-2">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                        <h1 class="grey-background">Looking for your dream job?</h1>
+                        <div><h2 class="color-background">Nervous about your big interview?</h2></div>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-check"></i>In 2015 alone, <b>1.9 million students</b> graduated from US colleges.</li>
+                            <li><i class="fa fa-check"></i>An average of <b>250 resumes</b> are received for every corporate job opening.</li>
+                            <li><i class="fa fa-check"></i>33% of recruiters make up their minds within the <b>first 90 seconds</b> of the interview.</li>  
+                        </ul>
+                    </div>
+                </div>
+            </div></div><div class="owl-item cloned" style="width: 1440px; margin-right: 0px;"><div class="item slide-1">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                        <h1 class="color-background">Looking for your dream job?</h1>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="" class="btn btn-default btn-lg">Sign Up</a>
+                        <a href="" class="btn btn-inverse btn-lg">Sign in</a>
+                    </div>
+                </div>
+            </div></div><div class="owl-item cloned" style="width: 1440px; margin-right: 0px;"><div class="item slide-2">
+                <div class="slide-mask"></div>
+                <div class="slide-body">
+                    <div class="container">
+                        <h1 class="grey-background">Looking for your dream job?</h1>
+                        <div><h2 class="color-background">Nervous about your big interview?</h2></div>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-check"></i>In 2015 alone, <b>1.9 million students</b> graduated from US colleges.</li>
+                            <li><i class="fa fa-check"></i>An average of <b>250 resumes</b> are received for every corporate job opening.</li>
+                            <li><i class="fa fa-check"></i>33% of recruiters make up their minds within the <b>first 90 seconds</b> of the interview.</li>  
+                        </ul>
+                    </div>
+                </div>
+            </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style=""><i class="fa fa-angle-left"></i></div><div class="owl-next" style=""><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div></div></div></div>
+    </section>
+    <!-- ==========================
+      JUMBOTRON - END 
+    =========================== -->
+
+
+    <!-- ==========================
+      SERVICES - START 
+    =========================== -->
+    <section class="content services services-3x border-top border-bottom">
+        <div class="container">
+          <div class="row row-no-padding">
+            
+              <!-- SERVICE - START -->
+                <div class="col-xs-12 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-graduation-cap"></i>
+                        <p></p><h3>In 2015 alone, 1.9 million students graduated from US colleges.</h3><p></p> 
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+                
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-group"></i>
+                        <p></p><h3>An average of 250 resumes are received for every corporate job opening.</h3><p></p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+                
+                <!-- SERVICE - START -->
+                <div class="col-xs-6 col-sm-4">
+                    <div class="service">
+                        <i class="fa fa-hourglass-start"></i>
+                        <p></p><h3>33% of recruiters make up their minds within the first 90 seconds of the interview.</h3><p></p>
+                    </div>
+                </div>
+                <!-- SERVICE - END -->
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- ==========================
+      SERVICES - END 
+    =========================== -->
+    
+    <!-- ==========================
+      NOTIFICATION - START 
+    =========================== -->
+    <section class="content pattern notification">
+        <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                    <span>Practice interviews in real time with a real person!</span>
+                    <a href="http://localhost:3000/profiles" class="btn btn-default btn-lg">Find an expert</a>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+     <!-- ==========================
+      NOTIFICATION - END 
+    =========================== -->
+    <!-- ==========================
+      CATEGORIES - START 
+    =========================== -->
+    <section class="content categories">
+        <div class="row row-no-padding">
+        
+            <!-- CATEGORY - START -->
+            <div class="col-xs-4">
+                <div class="category">
+                    <a href="http://localhost:3000/products.html">
+                        </a><a href="http://localhost:3000/profiles"><img src="./IntervyoumeApp_files/webdevelopers-5e1f876ea31251c10cdfd8baf33dbb451c23aae624520b468026b401f1901a34.jpg" alt="Webdevelopers 5e1f876ea31251c10cdfd8baf33dbb451c23aae624520b468026b401f1901a34"> </a>
+                        <div class="category-mask"></div>
+                        <h3 class="category-title">Web Dev <span>Professionals</span></h3>
+                    
+                </div>
+            </div>
+            <!-- CATEGORY - END -->
+            
+            <!-- CATEGORY - START -->
+            <div class="col-xs-4">
+                <div class="category">
+                    <a href="http://localhost:3000/products.html">
+                       <img src="./IntervyoumeApp_files/category-3-af3b18d7c06d13e7bc743022094e5d0dc574f2c3592a493ddb71d59b2473af5a.jpg" alt="Category 3 af3b18d7c06d13e7bc743022094e5d0dc574f2c3592a493ddb71d59b2473af5a">
+                        <div class="category-mask"></div>
+                        <h3 class="category-title">Design<span>Professionals</span></h3>
+                    </a>
+                </div>
+            </div>
+            <!-- CATEGORY - END -->
+            
+            <!-- CATEGORY - START -->
+            <div class="col-xs-4">
+                <div class="category">
+                    <a href="http://localhost:3000/products.html">
+                       <img src="./IntervyoumeApp_files/category-4-bb585466dc10b4b02e88ce3c1deea880c480e49c6c6b272c0737a91b73102e3f.jpg" alt="Category 4 bb585466dc10b4b02e88ce3c1deea880c480e49c6c6b272c0737a91b73102e3f">
+                        <div class="category-mask"></div>
+                        <h3 class="category-title">Sales <span>Professionals</span></h3>
+                    </a>
+                </div>
+            </div>
+            <!-- CATEGORY - END -->
+                            
+        </div>
+        
+    </section>
+    <!-- ==========================
+      CATEGORIES - END 
+    =========================== -->
+
+     <!-- ==========================
+      GRID PRODUCTS - START 
+    =========================== -->
+    <section class="content grid-products border-top">
+        <div class="container">
+           <div class="row">
+              
+              <!--   <div class="col-xs-6 col-sm-3">
+                    <article class="product-item">
+                        <img src="/assets/theme/products/product-1-c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2.jpg" alt="Product 1 c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2" />
+                        <h3><a href="single-product.html">Moss Mernagh</a><br>
+                        Software Engineer, Google</h3>
+                        <div class="product-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <span class="price">  
+                        <span class="amount">Hourly rate: </span>
+                         <del><span class="amount">$36.00</span></del>      
+                            <ins><span class="amount">$30.00</span></ins>
+                        </span>
+                    </article>
+                </div>
+                
+                <div class="col-xs-6 col-sm-3">
+                    <article class="product-item">
+                       <img src="/assets/theme/products/product-2-07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5.jpg" alt="Product 2 07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5" />
+                        <h3><a href="single-product.html">Charu Sharma</a><br>
+                        Sales, LinkedIn</h3>
+                        <div class="product-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <span class="price">  
+                        <span class="amount">Hourly rate: </span>
+                         <del><span class="amount">$36.00</span></del>      
+                            <ins><span class="amount">$30.00</span></ins>
+                        </span>
+                    </article>
+                </div> -->
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-1-c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2.jpg" alt="Product 1 c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2">
+                              <h3>Moss Mernagh <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-2-07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5.jpg" alt="Product 2 07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5">
+                              <h3>Charu Sharma <br> Sales, LinkedIn</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                    </ul>
+                    
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-1-c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2.jpg" alt="Product 1 c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2">
+                              <h3>Moss Mernagh <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-2-07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5.jpg" alt="Product 2 07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5">
+                              <h3>Charu Sharma <br> Sales, LinkedIn</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                    </ul>
+                    
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-1-c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2.jpg" alt="Product 1 c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2">
+                              <h3>Moss Mernagh <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-2-07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5.jpg" alt="Product 2 07fbbc6e7cb2bd0cab922c505b5839065bd90d2ef076cb00df4790c3ce4839c5">
+                              <h3>Charu Sharma <br> Sales, LinkedIn</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                    </ul>
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-3">
+                    <ul class="list-unstyled small-product">
+                      
+                    <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-1-c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2.jpg" alt="Product 1 c1020d456bb7ee863c1cceb59ddfc5c582f8f7dbbff6626c212133bf4aacd3a2">
+                              <h3>Anup Mantri <br> Software Engineer, Google</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                                <del><span class="amount">$36.00</span></del>
+                              <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                        <!-- PRODUCT - START -->
+                        <li class="clearfix">
+                          <a href="http://localhost:3000/single-product.html">
+                              <img src="./IntervyoumeApp_files/product-3-b8c8258253517fbb8d689f8d7543dad3d2ab29ebae06458ce081422214ee7029.jpg" alt="Product 3 b8c8258253517fbb8d689f8d7543dad3d2ab29ebae06458ce081422214ee7029">
+                              <h3>Davide Cerri <br> Software Engineer, Airbnb</h3>
+                            </a>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="price">
+                              <del><span class="amount">$36.00</span></del>
+                                <ins><span class="amount">$30.00</span></ins>
+                            </span>
+                        </li>
+                        <!-- PRODUCT - END -->
+                        
+                    </ul>
+                    
+                </div>
+             </div>       
+        </div>
+    </section>
+    <!-- ==========================
+      GRID PRODUCTS - END 
+    =========================== -->
+    
+    
+    <!-- ==========================
+      RECENT BLOG POSTS - START 
+    =========================== -->
+    <section class="content recent-blog-posts">
+        <div class="container">
+          <div class="section-title">
+                <h2>Useful online resources</h2>
+                <p>We highly recommend reading the following articles.</p>
+            </div>
+          <div class="row">
+              
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <img src="./IntervyoumeApp_files/blog-1-2b5dbb8418dd754962b9236f865981a84de57a3483fbff1cd2a8093545e75750.jpg" alt="Blog 1 2b5dbb8418dd754962b9236f865981a84de57a3483fbff1cd2a8093545e75750">
+                        <h3><a href="https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success">The Ultimate Interview Guide: 30 Prep Tips for Job Interview Success</a></h3>
+                        <span class="date">The Daily Muse</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <img src="./IntervyoumeApp_files/blog-2-96b7bff7da6fecad6261385d5995b4c8dc527fd8e3aa985ffa9a6b70b67ec1ab.jpg" alt="Blog 2 96b7bff7da6fecad6261385d5995b4c8dc527fd8e3aa985ffa9a6b70b67ec1ab">
+                        <h3><a href="https://www.glassdoor.com/blog/common-interview-questions/">50 Most Common Interview Questions, compiled by Glassdoor team</a></h3>
+                        <span class="date">Glassdoor blog</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <img src="./IntervyoumeApp_files/blog-3-d2d49af8a2c601e875374d0f7bd6f85543a2b43d008d31b39842cadc81cfb177.jpg" alt="Blog 3 d2d49af8a2c601e875374d0f7bd6f85543a2b43d008d31b39842cadc81cfb177">
+                        <h3><a href="http://blog.linkedin.com/2015/09/01/the-hiring-secrets-of-richard-branson-apples-angela-ahrendts-other-top-managers/">The Hiring Secrets of Richard Branson, Apple’s Angela Ahrendts &amp; Other Top Managers</a></h3>
+                        <span class="date">LinkedIn.com</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+                <!-- BLOG POST - START -->
+                <div class="col-xs-6 col-sm-3">
+                    <article class="post">
+                      <img src="./IntervyoumeApp_files/blog-4-37c0f60e4f4088b897a5e5d53972b5cb7d7bb819813e1d03c4214cb4a0f5e1b2.jpg" alt="Blog 4 37c0f60e4f4088b897a5e5d53972b5cb7d7bb819813e1d03c4214cb4a0f5e1b2">
+                        <h3><a href="http://www.quintcareers.com/star-interviewing/">STAR Interviewing Response Technique for Success in Behavioral Job Interviews</a></h3>
+                        <span class="date">Quint Careers</span>
+                    </article>
+                </div>
+                <!-- BLOG POST - END -->
+                
+            </div>
+        </div>
+    </section>
+     <!-- ==========================
+      RECENT BLOG POSTS - END 
+    =========================== -->
+    
+    <!-- ==========================
+      NOTIFICATION - START 
+    =========================== -->
+    <section class="content pattern notification">
+        <div class="container">
+          <div class="row">
+              
+                <div class="col-sm-12">
+                    <h3>How Intervyou.me was founded?</h3>
+                    <p>"As a college senior in 2013, I was thrilled when I made it to the final interview at a top trading firm for a six figure salary. Sadly, I failed the interview and didn't get the offer. I realized that I hadn't prepared enough, because I didn't know whom to practice with, and that my college friends were in the same boat. I really wanted to make this app for other job seekers to find experts and peers to prep with, and get their dream job."</p><p>
+                    <a href="https://www.linkedin.com/in/charusharma1"><i>-Charu Sharma, Founder of Intervyou.me</i></a></p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- ==========================
+      NOTIFICATION - END 
+    =========================== -->
+    
+    <!-- ==========================
+      BRANDS - START 
+    =========================== -->
+    <section class="content brands pattern border-top border-bottom">
+        <div class="container">
+          <div id="brands-carousel" class="owl-carousel owl-theme owl-loaded">
+              
+                
+                
+                
+                
+                
+                
+            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1520px, 0px, 0px); transition: 1s; width: 3610px;"><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/2-8365a0d0816169c89e517570c7fefabad41ec804ae30767ccefd5c8e50a04d3a.png" alt="2 8365a0d0816169c89e517570c7fefabad41ec804ae30767ccefd5c8e50a04d3a">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/3-ab4bb231675c54b95857f7e6fad936943d1eb27b8400afdefccce43d01137c3b.png" alt="3 ab4bb231675c54b95857f7e6fad936943d1eb27b8400afdefccce43d01137c3b">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/4-45523c0486a4f313cf4c0bc1f2abb4e533d677c601e340176d68799bdd99d5e1.png" alt="4 45523c0486a4f313cf4c0bc1f2abb4e533d677c601e340176d68799bdd99d5e1">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/5-4a344a4003306c86bcce883929737ba6b78fd8f751896163e3587eb863b0d2b0.png" alt="5 4a344a4003306c86bcce883929737ba6b78fd8f751896163e3587eb863b0d2b0">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/6-75ac2c1a500d3f25ac8166943c6096672e1be4269e7a73222380d11bf669c833.png" alt="6 75ac2c1a500d3f25ac8166943c6096672e1be4269e7a73222380d11bf669c833">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/7-45f11667f674b8eecd9b970db35f1c86f861e8a16d71e0e6a013470a3828a0fa.png" alt="7 45f11667f674b8eecd9b970db35f1c86f861e8a16d71e0e6a013470a3828a0fa">
+                </a></div></div><div class="owl-item" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/1-6dd57904c4400cacf87c9ddf4dda670c2dced52b8084bcf789525e513e8a11cf.png" alt="1 6dd57904c4400cacf87c9ddf4dda670c2dced52b8084bcf789525e513e8a11cf">
+                </a></div></div><div class="owl-item" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/2-8365a0d0816169c89e517570c7fefabad41ec804ae30767ccefd5c8e50a04d3a.png" alt="2 8365a0d0816169c89e517570c7fefabad41ec804ae30767ccefd5c8e50a04d3a">
+                </a></div></div><div class="owl-item active" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/3-ab4bb231675c54b95857f7e6fad936943d1eb27b8400afdefccce43d01137c3b.png" alt="3 ab4bb231675c54b95857f7e6fad936943d1eb27b8400afdefccce43d01137c3b">
+                </a></div></div><div class="owl-item active" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/4-45523c0486a4f313cf4c0bc1f2abb4e533d677c601e340176d68799bdd99d5e1.png" alt="4 45523c0486a4f313cf4c0bc1f2abb4e533d677c601e340176d68799bdd99d5e1">
+                </a></div></div><div class="owl-item active" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/5-4a344a4003306c86bcce883929737ba6b78fd8f751896163e3587eb863b0d2b0.png" alt="5 4a344a4003306c86bcce883929737ba6b78fd8f751896163e3587eb863b0d2b0">
+                </a></div></div><div class="owl-item active" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/6-75ac2c1a500d3f25ac8166943c6096672e1be4269e7a73222380d11bf669c833.png" alt="6 75ac2c1a500d3f25ac8166943c6096672e1be4269e7a73222380d11bf669c833">
+                </a></div></div><div class="owl-item active" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/7-45f11667f674b8eecd9b970db35f1c86f861e8a16d71e0e6a013470a3828a0fa.png" alt="7 45f11667f674b8eecd9b970db35f1c86f861e8a16d71e0e6a013470a3828a0fa">
+                </a></div></div><div class="owl-item cloned active" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/1-6dd57904c4400cacf87c9ddf4dda670c2dced52b8084bcf789525e513e8a11cf.png" alt="1 6dd57904c4400cacf87c9ddf4dda670c2dced52b8084bcf789525e513e8a11cf">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/2-8365a0d0816169c89e517570c7fefabad41ec804ae30767ccefd5c8e50a04d3a.png" alt="2 8365a0d0816169c89e517570c7fefabad41ec804ae30767ccefd5c8e50a04d3a">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/3-ab4bb231675c54b95857f7e6fad936943d1eb27b8400afdefccce43d01137c3b.png" alt="3 ab4bb231675c54b95857f7e6fad936943d1eb27b8400afdefccce43d01137c3b">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/4-45523c0486a4f313cf4c0bc1f2abb4e533d677c601e340176d68799bdd99d5e1.png" alt="4 45523c0486a4f313cf4c0bc1f2abb4e533d677c601e340176d68799bdd99d5e1">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/5-4a344a4003306c86bcce883929737ba6b78fd8f751896163e3587eb863b0d2b0.png" alt="5 4a344a4003306c86bcce883929737ba6b78fd8f751896163e3587eb863b0d2b0">
+                </a></div></div><div class="owl-item cloned" style="width: 190px; margin-right: 0px;"><div class="item"><a href="http://localhost:3000/lookbook.html">
+                <img src="./IntervyoumeApp_files/6-75ac2c1a500d3f25ac8166943c6096672e1be4269e7a73222380d11bf669c833.png" alt="6 75ac2c1a500d3f25ac8166943c6096672e1be4269e7a73222380d11bf669c833">
+                </a></div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style="display: none;"></div></div></div>
+        </div>
+    </section>
+    <!-- ==========================
+      BRANDS - END 
+    =========================== -->
+
+
+    <!-- ==========================
+      HEADER - END 
+    =========================== -->  
+<div class="container">
+<br>
+<br>
+<br>
+<br>
+<br>
+  
+</div>
+
+    <!-- ==========================
+      FOOTER - START 
+    =========================== -->
+    <footer class="navbar navbar-default">
+      <div class="container">
+          <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                  <div class="footer-widget footer-widget-contacts">
+                      <h4>Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-envelope"></i> charu1603@gmail.com</li>
+                            <li><i class="fa fa-phone"></i> 347 676 0241</li>
+                            <li class="social">
+                              <a href="https://www.facebook.com/intervyou.me/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/Intervyoume"><i class="fa fa-twitter"></i></a>
+                                <a href="http://localhost:3000/#"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/5009429"><i class="fa fa-linkedin"></i></a>
+                                <a href="http://localhost:3000/#"><i class="fa fa-tumblr"></i></a>
+                            </li>
+                        </ul>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <div class="footer-widget footer-widget-links">
+                      <h4>Information</h4>
+                        <ul class="list-unstyled">
+                          <li><a href="http://localhost:3000/about-shop.html">About Shop</a></li>
+                            <li><a href="http://localhost:3000/stores.html">Our Stores</a></li>
+                            <li><a href="http://localhost:3000/terms-conditions.html">Terms &amp; Conditions</a></li>
+                            <li><a href="http://localhost:3000/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="http://localhost:3000/faq.html">FAQ</a></li>
+                            <li><a href="http://localhost:3000/my-account.html">My account</a></li>
+                        </ul>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="footer-widget footer-widget-twitter">
+                      <h4>Recent tweets</h4>
+                        <div id="twitter-wrapper"><ul class="list-unstyled"><li><p class="tweet">Major Update for our multipurpose <a href="https://twitter.com/hashtag/bootstrap?src=hash" data-scribe="element:hashtag">#bootstrap</a> <a href="https://twitter.com/hashtag/theme?src=hash" data-scribe="element:hashtag">#theme</a> Roxie released. New pages, new features, new look. Check it on <a href="https://t.co/dCmDxfbw2V" data-expanded-url="https://wrapbootstrap.com/theme/roxie-multipurpose-responsive-theme-WB0T238T2" target="_blank" title="https://wrapbootstrap.com/theme/roxie-multipurpose-responsive-theme-WB0T238T2" data-scribe="element:url"><span>https://</span><span>wrapbootstrap.com/theme/roxie-mu</span><span>ltipurpose-responsive-theme-WB0T238T2</span><span><span>&nbsp;</span>…</span></a></p><p class="timePosted">Posted on 10 Jan</p></li><li><p class="tweet">New Major update for our Supreme <a href="https://twitter.com/hashtag/bootstrap?src=hash" data-scribe="element:hashtag">#bootstrap</a> <a href="https://twitter.com/hashtag/multipurpose?src=hash" data-scribe="element:hashtag">#multipurpose</a> <a href="https://twitter.com/hashtag/theme?src=hash" data-scribe="element:hashtag">#theme</a> is out! Brand new pages, layouts and features <a href="https://t.co/9sgN0AC454" data-expanded-url="https://wrapbootstrap.com/theme/supreme-precision-business-theme-WB08P8D88" target="_blank" title="https://wrapbootstrap.com/theme/supreme-precision-business-theme-WB08P8D88" data-scribe="element:url"><span>https://</span><span>wrapbootstrap.com/theme/supreme-</span><span>precision-business-theme-WB08P8D88</span><span><span>&nbsp;</span>…</span></a></p><p class="timePosted">Posted on 21 Dec</p></li></ul></div>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                  <div class="footer-widget footer-widget-facebook">
+                      <h4>Facebook Page</h4>
+                        <ul class="list-unstyled row row-no-padding">
+                          <li class="col-xs-3"><a href="http://localhost:3000/#">
+                           <img src="./IntervyoumeApp_files/avatar_01-0e530babc61a11ab107ba798c06fe4ab31085f07bcdf81f951fef31790bd83b6.jpg" alt="Avatar 01 0e530babc61a11ab107ba798c06fe4ab31085f07bcdf81f951fef31790bd83b6">
+                           </a></li>
+                            <li class="col-xs-3"><a href="http://localhost:3000/#">
+                             <img src="./IntervyoumeApp_files/avatar_02-525d67f610a9b8d469ea4142c6b17c885465321b778cee8051edfd1d7e6d40b7.jpg" alt="Avatar 02 525d67f610a9b8d469ea4142c6b17c885465321b778cee8051edfd1d7e6d40b7">
+                            </a></li>
+                            <li class="col-xs-3"><a href="http://localhost:3000/#">
+                            <img src="./IntervyoumeApp_files/avatar_03-b3e61143efffb44a6f7610307bebba625acafc3bb17e820b75dfe2ff51c8ce5c.jpg" alt="Avatar 03 b3e61143efffb44a6f7610307bebba625acafc3bb17e820b75dfe2ff51c8ce5c">
+                            </a></li>
+                            <li class="col-xs-3"><a href="http://localhost:3000/#">
+                            <img src="./IntervyoumeApp_files/avatar_04-7e3cd09e0db0584e640b974e76989218050ee98dc47717ee5dece72728c7a61a.jpg" alt="Avatar 04 7e3cd09e0db0584e640b974e76989218050ee98dc47717ee5dece72728c7a61a">
+                            </a></li>
+                            <li class="col-xs-3"><a href="http://localhost:3000/#">
+                            <img src="./IntervyoumeApp_files/avatar_01-0e530babc61a11ab107ba798c06fe4ab31085f07bcdf81f951fef31790bd83b6.jpg" alt="Avatar 01 0e530babc61a11ab107ba798c06fe4ab31085f07bcdf81f951fef31790bd83b6">
+                            </a></li>
+                            <li class="col-xs-3"><a href="http://localhost:3000/#">
+                            <img src="./IntervyoumeApp_files/avatar_02-525d67f610a9b8d469ea4142c6b17c885465321b778cee8051edfd1d7e6d40b7.jpg" alt="Avatar 02 525d67f610a9b8d469ea4142c6b17c885465321b778cee8051edfd1d7e6d40b7">
+                            </a></li>
+                            <li class="col-xs-3"><a href="http://localhost:3000/#">
+                            <img src="./IntervyoumeApp_files/avatar_03-b3e61143efffb44a6f7610307bebba625acafc3bb17e820b75dfe2ff51c8ce5c.jpg" alt="Avatar 03 b3e61143efffb44a6f7610307bebba625acafc3bb17e820b75dfe2ff51c8ce5c">
+                            </a></li>
+                            <li class="col-xs-3"><a href="http://localhost:3000/#">
+                            <img src="./IntervyoumeApp_files/avatar_04-7e3cd09e0db0584e640b974e76989218050ee98dc47717ee5dece72728c7a61a.jpg" alt="Avatar 04 7e3cd09e0db0584e640b974e76989218050ee98dc47717ee5dece72728c7a61a">
+                            </a></li>
+                        </ul>
+                        <p>45,500 Likes  <a href="http://localhost:3000/#" class="btn btn-default btn-sm"><i class="fa fa-thumbs-up"></i>Like</a></p>
+                  </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="row">
+                    <div class="col-sm-6">
+                        <p class="copyright">© Intervyou.me 2015 All right reserved.</p>
+                        <p class="copyright">Designed by <a href="http://www.linkedin.com/in/charusharma1" target="_blank">Charu Sharma.</a></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="list-inline payment-methods">
+                          <li><i class="fa fa-cc-amex"></i></li>
+                            <li><i class="fa fa-cc-diners-club"></i></li>
+                            <li><i class="fa fa-cc-discover"></i></li>
+                            <li><i class="fa fa-cc-jcb"></i></li>
+                            <li><i class="fa fa-cc-mastercard"></i></li>
+                            <li><i class="fa fa-cc-paypal"></i></li>
+                            <li><i class="fa fa-cc-stripe"></i></li>
+                            <li><i class="fa fa-cc-visa"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==========================
+      FOOTER - END 
+    =========================== -->
+    
+    </div> <!-- PAGE - END -->
+    
+    <!-- ==========================
+      JS 
+    =========================== --> 
+    <div style="position: absolute; z-index: -10000; top: 0px; left: 0px; right: 0px; height: 3474px;"></div>
+    <div style="clear: both;"></div>
+
+
+<div style="position: absolute; z-index: -10000; top: 0px; left: 0px; right: 0px; height: 3369px;"></div><div style="clear: both;"></div></body></html>

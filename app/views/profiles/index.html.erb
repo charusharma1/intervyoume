@@ -19,7 +19,7 @@
       <tr>
         <th><button ng-click="toggleOrder('name')">Name</button></th>
         <th><button ng-click="toggleOrder('email')">Email</button></th>
-        <th><button ng-click="toggleOrder('title')">Title</button></th>
+        <th><button ng-click="toggleOrder('job_function')">Job Function</button></th>
         <th><button ng-click="toggleOrder('company')">Company</button></th>
       </tr>
 
@@ -35,10 +35,10 @@
     </datalist>
     <input ng-model="emailFilter" list="emails"></td>
     
-    <td><datalist id="titles">
-      <option ng-repeat="profile in profiles">{{profile.professional_roles[0].title}} </option>
+    <td><datalist id="job_functions">
+      <option ng-repeat="profile in profiles">{{profile.job_function}} </option>
     </datalist>
-    <input ng-model="titleFilter" list="titles"></td>
+    <input ng-model="job_functionFilter" list="job_functions"></td>
 
     <td><datalist id="companies">
       <option ng-repeat="profile in profiles">{{profile.professional_roles[0].company}} </option>
@@ -46,10 +46,10 @@
     <input ng-model="companyFilter" list="companies"></td>
       </tr>
       
-      <tr ng-repeat="profile in profiles | filter: {full_name: nameFilter, email: emailFilter, title: titleFilter, company: companyFilter}| orderBy:orderAttribute:direction">
+      <tr ng-repeat="profile in profiles | filter: {full_name: nameFilter, email: emailFilter, job_function: job_functionFilter, professional_roles: { company: companyFilter } } | orderBy:orderAttribute:direction">
         <td><a href="/profiles/{{profile.id}}">{{ profile.full_name}}</a></td>
         <td>{{profile.email}}</td>
-        <td>{{profile.professional_roles[0].title}}</td>
+        <td>{{profile.job_function}}</td>
         <td>{{profile.professional_roles[0].company}}</td>
       </tr>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160107051741) do
+ActiveRecord::Schema.define(version: 20160112050955) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer  "jobseeker_id",        limit: 4
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20160107051741) do
     t.datetime "updated_at"
     t.text     "last_name",              limit: 65535
     t.boolean  "if_expert"
+    t.string   "job_function",           limit: 255
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
