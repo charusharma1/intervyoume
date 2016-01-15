@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   
   get '/appointments', to: 'appointments#index'
+  get '/all_appointments', to: 'appointments#all_appointments'
   get '/appointments/new', to: 'appointments#new'
   post '/appointments', to: 'appointments#create'
   get '/appointments/:id', to: 'appointments#show'

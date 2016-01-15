@@ -1,5 +1,7 @@
 class Appointment < ActiveRecord::Base
-  has_many :users
+  
+  belongs_to :jobseeker, foreign_key: "jobseeker_id", class_name: "User"
+  belongs_to :expert, foreign_key: "expert_id", class_name: "User"
 
   def self.get_web_dev
     Appointment.where("job_function", "web dev")

@@ -24,17 +24,22 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @appointment = Appointment.new
+    @expert_id = params[:expert_id]
   end
 
   def create
-    @appointment = Appointment.new(appointment_params)
-    if @product.save
-    flash[:success] = "Your appointment request has been created!"
-    redirect_to "/appointments/#{@appointment.id}"
+    @appointment = Appointment.new(id: params[:id], jobseeker_id: current_user.id, expert_id: params[:expert_id], appointment_time: params[:appointment_time], appointment_channel: params[:appointment_channel])
+
+    if @appointment.save
+    flash[:success] = "Your appointment request has been sent!"
+    redirect_to "/all_appointments"
     else
       render :new
     end
+  end
+
+  def all_appointments
+    @all_appointments = Appointment.all
   end
 
   def edit
@@ -64,7 +69,7 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:jobseeker_id, :expert_id, :appointment_time, :appointment_channel)
+    params.require(:appointment).permit(:appointment_time, :appointment_channel)
   end
 
 end

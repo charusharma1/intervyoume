@@ -1,7 +1,27 @@
-<% @all_products.each do |product| %>
-  <div> <%= product.name %>
-    <%= product.image %>
-    <%= product.price %>
-  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<table class="table table-striped">
+    <tr>
+      <th>Job Seeker</th>
+      <th>Expert mentor</th>
+      <th>Appointment Time</th>
+      <th>Appointment Channel</th>
+    </tr>
+<% @all_appointments.each do |appointment| %>
+    <tr>
+       <td> <%= appointment.jobseeker_id %> </td>
+       <td> <%= appointment.expert_id %></td>
+       <td> <%= appointment.appointment_time %></td>
+       <td> <%= appointment.appointment_channel %>
+      </td>
+    </tr>
+  </table>
 <% end %>
 

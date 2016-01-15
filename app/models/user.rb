@@ -1,6 +1,11 @@
 class User < ActiveRecord::Base
-  belongs_to :role 
-  has_many :appointments
+  attr_accessor :password
+  has_many :jobseeker_appointments, foreign_key: :expert_id, class_name: "Appointment"
+  has_many :jobseekers, through: :jobseeker_appointments
+
+  has_many :expert_appointments, foreign_key: :jobseeker_id, class_name: "Appointment"
+  has_many :experts, through: :expert_appointments
+
   has_many :professional_roles
   # Include default devise modules. Others available are:
   # :omniauthable
