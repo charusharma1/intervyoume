@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114031303) do
+ActiveRecord::Schema.define(version: 20160118001457) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer  "jobseeker_id",        limit: 4
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160114031303) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "accepted"
+    t.integer  "sender",              limit: 4
   end
 
   create_table "professional_role_skills", force: :cascade do |t|

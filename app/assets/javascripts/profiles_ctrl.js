@@ -3,10 +3,11 @@
 
   angular.module("app").controller("profilesCtrl", function($scope, $http) {
 
-    $scope.setup = function() {
+    $scope.setup = function(type) {
       $http.get("/api/v1/profiles.json").then(function(response) {
         $scope.profiles = response.data;
-        console.log(response.data);
+        console.log(type);
+        $scope.jobFunctionFilter = type;
       });
       
     }

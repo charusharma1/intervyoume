@@ -10,251 +10,171 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,900,800" rel="stylesheet" type="text/css">
 </head>
 <body>
-  
+
     <!-- ==========================
       SCROLL TOP - START 
-    =========================== -->
-    <div id="scrolltop" class="hidden-xs"><i class="fa fa-angle-up"></i></div>
+      =========================== -->
+      <div id="scrolltop" class="hidden-xs"><i class="fa fa-angle-up"></i></div>
     <!-- ==========================
       SCROLL TOP - END 
-    =========================== -->
-    
-  <!-- <!-- ==========================
-      COLOR SWITCHER - START 
-    =========================== -->
-<!--   <div id="color-switcher">
-        <div id="toggle-switcher"><i class="fa fa-gear"></i></div>
-        <span>Color Scheme:</span>
-        <ul class="list-unstyled list-inline">
-            <li id="red" data-toggle="tooltip" data-placement="top" title="" data-original-title="Red"></li>
-            <li id="purple" data-toggle="tooltip" data-placement="top" title="" data-original-title="Purple"></li>
-            <li id="yellow" data-toggle="tooltip" data-placement="top" title="" data-original-title="Yellow"></li>
-            <li id="blue" data-toggle="tooltip" data-placement="top" title="" data-original-title="Blue"></li>
-            <li id="dark-blue" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dark Blue"></li>
-            <li id="orange" data-toggle="tooltip" data-placement="top" title="" data-original-title="Orange"></li>
-            <li id="green" data-toggle="tooltip" data-placement="top" title="" data-original-title="Green"></li>
-            <li id="brown" data-toggle="tooltip" data-placement="top" title="" data-original-title="Brown"></li>
-            <li id="dark-red" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dark Red"></li>
-            <li id="light-green" data-toggle="tooltip" data-placement="top" title="" data-original-title="Light Green"></li>
-        </ul>
-    </div> -->
-  <!-- ==========================
-      COLOR SWITCHER - END 
-    =========================== --> -->
-    
-    <div id="page-wrapper"> <!-- PAGE - START -->
+      =========================== -->
 
-  
+
+      <div id="page-wrapper"> <!-- PAGE - START -->
+
+
   <!-- ==========================
       HEADER - START 
-    =========================== -->
-  <div class="top-header hidden-xs hidden">
-      <div class="container">
-            <div class="row">
-                <div class="col-sm-5">
-                    <ul class="list-inline contacts">
-                        <li><i class="fa fa-envelope"></i> help@umarket.com</li>
-                        <li><i class="fa fa-phone"></i> 754 213 456</li>
-                    </ul>
-                </div>
-                <div class="col-sm-7 text-right">
-                    <ul class="list-inline links">
-                        <li><a href="my-account.html">My account</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="wishlist.html">Wishlist (5)</a></li>
-                        <li><a href="compare.html">Compare (3)</a></li>
-                        <li><a href="signin.html">Logout</a></li>
-                    </ul>
-                    <ul class="list-inline languages hidden-sm">
-                      <li>
-                        <a href="#">
-                        <%= image_tag "theme/flags/cz.png" %></a></li>
+      =========================== -->
+      <div class="top-header hidden-xs hidden">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5">
+              <ul class="list-inline contacts">
+                <li><i class="fa fa-envelope"></i> help@umarket.com</li>
+                <li><i class="fa fa-phone"></i> 754 213 456</li>
+              </ul>
+            </div>
+            <div class="col-sm-7 text-right">
+              <ul class="list-inline links">
+                <li><a href="my-account.html">My account</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="wishlist.html">Wishlist (5)</a></li>
+                <li><a href="compare.html">Compare (3)</a></li>
+                <li><a href="signin.html">Logout</a></li>
+              </ul>
+              <ul class="list-inline languages hidden-sm">
+                <li>
+                  <a href="#">
+                    <%= image_tag "theme/flags/cz.png" %></a></li>
                         <!-- <img src="assets/images/flags/cz.png" alt="cs_CZ">
-                         -->
+                      -->
 
-                        <li><a href="#">
+                      <li><a href="#">
                         <%= image_tag "theme/flags/us.png" %></a></li>
                         <!-- <img src="assets/images/flags/us.png" alt="en_US"> -->
                         <li><a href="#"><%= image_tag "theme/flags/de.png" %></a></li>
-                       <!--  <img src="assets/images/flags/de.png" alt="de_DE"> -->
-                    </ul>
+                        <!--  <img src="assets/images/flags/de.png" alt="de_DE"> -->
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <header class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-      <% if current_user %>
-        <li><%= link_to "Sign out", "/users/sign_out", method: :delete %></li>
-        <li><a><%= current_user.email%> is signed in</a></li>
-        <% else %>
-        
-         <li><%= link_to "Sign in", "/users/sign_in" %></li>
-          <li><%= link_to "Sign up", "/users/sign_up" %></li>
-          <% end %>
-            <div class="navbar-header">
-                <a href="index.html" class="navbar-brand"><span>Interv</span>you.me</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
-            </div>
-            <div class="navbar-collapse collapse">
-              <p class="navbar-text hidden-xs hidden-sm">Practice mock interviews with industry experts and peers</p>
-              <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
+              </div>
+              <header class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+
+                  <div class="navbar-header">
+                    <a href="/" class="navbar-brand"><span>Interv</span>you.me</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+                  </div>
+                  <div class="navbar-collapse collapse">
+                    <p class="navbar-text hidden-xs hidden-sm">Practice mock interviews with industry experts and peers</p>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">About</a>
                         <ul class="dropdown-menu">
-                          <li><a href="index.html">Homepage</a></li>
-                            <li><a href="homepage-2.html">About Us</a></li>
-                            <li><a href="homepage-3.html">Careers<span class="label label-danger pull-right">SOON</span></a></li>
-                            <li><a href="homepage-4.html">Contact Us</a></li>
+                          <li><a href="/">Homepage</a></li>
+                          <li><a href="/pages/about_us">About Us</a></li>
+                          <li><a>Careers<span class="label label-danger pull-right">SOON</span></a></li>
+                          <li><a href="/pages/contact_us">Contact Us</a></li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Practice with</a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Practice with</a>
                         <ul class="dropdown-menu">
-                            <li><%= link_to "Web Developers", "/profiles?job_function=web_dev" %></li>
-                            <li><%= link_to "Designers", "/profiles?job_function=design" %></li>
-                            <li><%= link_to "Sales professionals", "/profiles?job_function=sales" %></li>
-                            <li><%= link_to "All professionals", "/profiles" %></li>
+                          <li><%= link_to "Web Developers", "/profiles?job_function=webdeveloper" %></li>
+                          <li><%= link_to "Designers", "/profiles?job_function=design" %></li>
+                          <li><%= link_to "Sales professionals", "/profiles?job_function=sales" %></li>
+                          <li><%= link_to "All professionals", "/profiles" %></li>
                         </ul>
-                    </li>
+                      </li>
 
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">Dashboard</a>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">My Account</a>
                         <ul class="dropdown-menu">
-                            <li><%= link_to "My profile", "/profiles" %></li>
-                            <li><%= link_to "My appointments", "/all_appointments" %></li>
-                            </ul>
-                    </li>
-                    
+                          <% if current_user %>
+                          <li><%= link_to "#{@requests.length} Request(s)", "/appointments" %></li>
+                          <li><%= link_to "My appointments", "/appointments" %></li>
+                          <li><%= link_to "My profile", "/profiles/#{current_user.id}" %></li>
+                          <li><%= link_to "Sign out", "/users/sign_out", method: :delete %></li>
+                          <% else %>
+                          <li><%= link_to "Sign in", "/users/sign_in" %></li>
+                          <li><%= link_to "Sign up", "/users/sign_up" %></li>
+                          <% end %>
+
                         </ul>
-                    </li>
-                    
+                      </li>
+
+                      <% if current_user %>
+                      <li><%= link_to "Sign out", "/users/sign_out", method: :delete %></li>
+                      <% else %>
+                      <li><%= link_to "Sign in", "/users/sign_in" %></li>
+                      <li><%= link_to "Sign up", "/users/sign_up" %></li>
+                      <% end %>
+                    </ul>
+                  </li>
+
+
                 </ul>
-            </div>
+              </li>
+
+            </ul>
+          </div>
         </div>
-    </header>
+      </header>
 
     <!-- ==========================
       HEADER - END 
-    =========================== -->  
-<div class="container main_page">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-  
-</div>
-<%= yield %>
+      =========================== -->  
+      <div class="container-fluid main_page buffer">
+        <%= yield %>
+      </div>
     <!-- ==========================
       FOOTER - START 
-    =========================== -->
-    <footer class="navbar navbar-default">
-      <div class="container">
+      =========================== -->
+      <footer class="navbar navbar-default">
+        <div class="container">
           <div class="row">
-                <div class="col-sm-3 col-xs-6">
-                  <div class="footer-widget footer-widget-contacts">
-                      <h4>Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><i class="fa fa-envelope"></i> charu1603@gmail.com</li>
-                            <li><i class="fa fa-phone"></i> 347 676 0241</li>
-                            <li class="social">
-                              <a href="https://www.facebook.com/intervyou.me/"><i class="fa fa-facebook"></i></a>
-                                <a href="https://twitter.com/Intervyoume"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/company/5009429"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-tumblr"></i></a>
-                            </li>
-                        </ul>
-                  </div>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                  <div class="footer-widget footer-widget-links">
-                      <h4>Information</h4>
-                        <ul class="list-unstyled">
-                          <li><a href="about-shop.html">About Shop</a></li>
-                            <li><a href="stores.html">Our Stores</a></li>
-                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="my-account.html">My account</a></li>
-                        </ul>
-                  </div>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <div class="footer-widget footer-widget-twitter">
-                      <h4>Recent tweets</h4>
-                        <div id="twitter-wrapper"></div>
-                  </div>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                  <div class="footer-widget footer-widget-facebook">
-                      <h4>Facebook Page</h4>
-                        <ul class="list-unstyled row row-no-padding">
-                          <li class="col-xs-3"><a href="#">
-                           <%= image_tag "theme/avatar/avatar_01.jpg" %>
-                           </a></li>
-                            <li class="col-xs-3"><a href="#">
-                             <%= image_tag "theme/avatar/avatar_02.jpg" %>
-                            </a></li>
-                            <li class="col-xs-3"><a href="#">
-                            <%= image_tag "theme/avatar/avatar_03.jpg" %>
-                            </a></li>
-                            <li class="col-xs-3"><a href="#">
-                            <%= image_tag "theme/avatar/avatar_04.jpg" %>
-                            </a></li>
-                            <li class="col-xs-3"><a href="#">
-                            <%= image_tag "theme/avatar/avatar_01.jpg" %>
-                            </a></li>
-                            <li class="col-xs-3"><a href="#">
-                            <%= image_tag "theme/avatar/avatar_02.jpg" %>
-                            </a></li>
-                            <li class="col-xs-3"><a href="#">
-                            <%= image_tag "theme/avatar/avatar_03.jpg" %>
-                            </a></li>
-                            <li class="col-xs-3"><a href="#">
-                            <%= image_tag "theme/avatar/avatar_04.jpg" %>
-                            </a></li>
-                        </ul>
-                        <p>45,500 Likes  <a href="#" class="btn btn-default btn-sm"><i class="fa fa-thumbs-up"></i>Like</a></p>
-                  </div>
-                </div>
+            <div >
+              <div class="footer-widget footer-widget-contacts">
+                <h4>Contact</h4>
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-envelope"></i> charu1603@gmail.com</li>
+                  <li><i class="fa fa-phone"></i> 347 676 0241</li>
+                  <li class="social">
+                    <a href="https://www.facebook.com/intervyou.me/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/Intervyoume"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/5009429"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-tumblr"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
+
             <div class="footer-bottom">
               <div class="row">
-                    <div class="col-sm-6">
-                        <p class="copyright">© Intervyou.me 2015 All right reserved.</p>
-                        <p class="copyright">Designed by <a href="http://www.linkedin.com/in/charusharma1" target="_blank">Charu Sharma.</a></p>
-                    </div>
-                    <div class="col-sm-6">
-                        <ul class="list-inline payment-methods">
-                          <li><i class="fa fa-cc-amex"></i></li>
-                            <li><i class="fa fa-cc-diners-club"></i></li>
-                            <li><i class="fa fa-cc-discover"></i></li>
-                            <li><i class="fa fa-cc-jcb"></i></li>
-                            <li><i class="fa fa-cc-mastercard"></i></li>
-                            <li><i class="fa fa-cc-paypal"></i></li>
-                            <li><i class="fa fa-cc-stripe"></i></li>
-                            <li><i class="fa fa-cc-visa"></i></li>
-                        </ul>
-                    </div>
+                <div class="col-sm-6">
+                  <p class="copyright">© Intervyou.me 2015 All right reserved.</p>
+                  <p class="copyright">Designed by <a href="http://www.linkedin.com/in/charusharma1" target="_blank">Charu Sharma.</a></p>
                 </div>
+
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     <!-- ==========================
       FOOTER - END 
-    =========================== -->
-    
+      =========================== -->
+
     </div> <!-- PAGE - END -->
     
     <!-- ==========================
       JS 
-    =========================== --> 
-    <div style="position: absolute; z-index: -10000; top: 0px; left: 0px; right: 0px; height: 3474px;"></div>
-    <div style="clear: both;"></div>
+      =========================== --> 
+      <div style="position: absolute; z-index: -10000; top: 0px; left: 0px; right: 0px; height: 3474px;"></div>
+      <div style="clear: both;"></div>
 
-</body>
-</html>
+    </body>
+    </html>

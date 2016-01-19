@@ -1,9 +1,14 @@
 <div>
-  <h3> Name <%= @profile.full_name %> </h3>
+  <h3> Name: <%= @profile.full_name %> </h3>
   <h3> Email: <%= @profile.email %> </h3>
   <h3> Job Function: <%= @profile.job_function %> </h3>
   <h3> Title: <%= @profile.professional_roles.first.title %> </h3>
   <h3> Company: <%= @profile.professional_roles.first.company %> </h3>
+  
+  <% if @profile.id == current_user.id %>
+  <button> <a href="/users/edit">Edit profile</a></button>
+  <% else %>
   <button> <a href="/appointments/new?expert_id=<%=@profile.id%>">Request an appointment</a></button>
+  <% end %>
   
 </div>

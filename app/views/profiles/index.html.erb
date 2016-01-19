@@ -1,5 +1,5 @@
 <div ng-app="app">
-  <div ng-controller="profilesCtrl" ng-init="setup()" >
+  <div ng-controller="profilesCtrl" ng-init="setup('<%= params[:job_function] %>')" >
     
     <div>
     {{profiles.length}} users
@@ -29,7 +29,7 @@
     <td><datalist id="job_functions">
       <option ng-repeat="profile in profiles">{{profile.job_function}} </option>
     </datalist>
-    <input ng-model="job_functionFilter" list="job_functions"></td>
+    <input ng-model="jobFunctionFilter" list="job_functions"></td>
 
     <td><datalist id="companies">
       <option ng-repeat="profile in profiles">{{profile.professional_roles[0].company}} </option>
@@ -37,7 +37,7 @@
     <input ng-model="companyFilter" list="companies"></td>
       </tr>
       
-      <tr ng-repeat="profile in profiles | filter: {full_name: nameFilter, email: emailFilter, job_function: job_functionFilter, professional_roles: { company: companyFilter } } | orderBy:orderAttribute:direction">
+      <tr ng-repeat="profile in profiles | filter: {full_name: nameFilter, email: emailFilter, job_function: jobFunctionFilter, professional_roles: { company: companyFilter } } | orderBy:orderAttribute:direction">
         <td><a href="/profiles/{{profile.id}}">{{ profile.full_name}}</a></td>
         <td>{{profile.email}}</td>
         <td>{{profile.job_function}}</td>

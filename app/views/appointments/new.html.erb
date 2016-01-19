@@ -2,6 +2,8 @@
 
 <%= hidden_field_tag :expert_id, @expert_id %>
 
+<%= hidden_field_tag :sender, current_user.id %>
+
 <div>
   <%= label_tag :appointment_time %>
   <%= text_field_tag :appointment_time %>

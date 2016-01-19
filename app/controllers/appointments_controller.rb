@@ -2,26 +2,11 @@ class AppointmentsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-      if params[:job_function] == "web dev"
-      @appointments = Appointment.get_web dev
-    elsif params[:job_function] == "design"
-      @appointments = Appointment.get_design
-    elsif params[:job_function] == "sales"
-      @appointments = Appointment.get_sales
-    elsif params[:job_function]
-      @appointments = Appointment.find_by(job_function: params[:job_function]).appointments
-    else
-      @appointments = Appointment.all
-    end
+     @my_jobseeker_appointments = Appointment.where(expert_id:current_user.id)
+    @my_expert_appointments = Appointment.where(jobseeker_id:current_user.id) 
   end
 
-  def show
-    if params[:id] == "random"
-      @appointment = Appointment.all.sample
-    else
-      @appointment = Appointment.find_by(id: params[:id])
-    end
-  end
+ 
 
   def new
     @expert_id = params[:expert_id]
@@ -32,14 +17,10 @@ class AppointmentsController < ApplicationController
 
     if @appointment.save
     flash[:success] = "Your appointment request has been sent!"
-    redirect_to "/all_appointments"
+    redirect_to "/appointments"
     else
       render :new
     end
-  end
-
-  def all_appointments
-    @all_appointments = Appointment.all
   end
 
   def edit
@@ -47,18 +28,20 @@ class AppointmentsController < ApplicationController
   end
 
   def update
-    @appointment = Appointment.find_by(id: params[:id])
-    @appontment.update(appointment_params)
-    flash[:success] = "Your appointment request has been updated!"
-    redirect_to "/appointments/#{@appointment.id}"
+    @appointment = Appointment.find_by(id: params[:id]) 
+    @appointment.accepted = params[:accepted]
+    @appointment.save
+    redirect_to "/appointments"
   end
 
-  def destroy
-    @appointment = Appointment.find_by(id: params[:id])
+
+def destroy
+    @appointment = Appointment.find_by(id: params[:id]) 
     @appointment.destroy
-    flash[:warning] = "Your appointment request has been cancelled!"
-    redirect_to "/"
+    redirect_to "/appointments"
+    flash[:danger] = "Appointment cancelled!"
   end
+
 
   def search
     search_term = params[:search]
