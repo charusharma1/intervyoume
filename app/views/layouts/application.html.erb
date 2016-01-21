@@ -66,10 +66,21 @@
                   <div class="navbar-header">
                     <a href="/" class="navbar-brand"><span>Interv</span>you.me</a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+
                   </div>
                   <div class="navbar-collapse collapse">
                     <p class="navbar-text hidden-xs hidden-sm">Practice mock interviews with industry experts and peers</p>
+                    <ul class="social social-media-icons">
+                      <a href="https://www.facebook.com/intervyou.me/"><i class="fa fa-facebook"></i></a>
+                      <a href="https://twitter.com/Intervyoume"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-instagram"></i></a>
+                      <a href="https://www.linkedin.com/company/5009429"><i class="fa fa-linkedin"></i></a>
+                      <a href="#"><i class="fa fa-tumblr"></i></a>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
+                    
+                    
+
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true">About</a>
                         <ul class="dropdown-menu">
@@ -110,8 +121,15 @@
                       <li><%= link_to "Sign in", "/users/sign_in" %></li>
                       <li><%= link_to "Sign up", "/users/sign_up" %></li>
                       <% end %>
+
+
+
                     </ul>
+
+
                   </li>
+
+
 
 
                 </ul>
@@ -125,7 +143,7 @@
     <!-- ==========================
       HEADER - END 
       =========================== -->  
-      <div class="container-fluid main_page buffer">
+      <div class="container-fluid main_page buffer make-bigg">
         <%= yield %>
       </div>
     <!-- ==========================
@@ -134,24 +152,24 @@
       <footer class="navbar navbar-default">
         <div class="container">
           <div class="row">
-            <div >
-              <div class="footer-widget footer-widget-contacts">
+            
+              <div class="footer-widget footer-widget-contacts center-aligned">
                 <h4>Contact</h4>
                 <ul class="list-unstyled">
                   <li><i class="fa fa-envelope"></i> charu1603@gmail.com</li>
-                  <li><i class="fa fa-phone"></i> 347 676 0241</li>
+                  <!-- <li><i class="fa fa-phone"></i> 347 676 0241</li>
                   <li class="social">
                     <a href="https://www.facebook.com/intervyou.me/"><i class="fa fa-facebook"></i></a>
                     <a href="https://twitter.com/Intervyoume"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/company/5009429"><i class="fa fa-linkedin"></i></a>
                     <a href="#"><i class="fa fa-tumblr"></i></a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
-            </div>
+           
 
-            <div class="footer-bottom">
+            <div class="footer-bottom center-aligned">
               <div class="row">
                 <div >
                   <p class="copyright">© Intervyou.me 2015 All right reserved.</p>
@@ -172,7 +190,7 @@
     <!-- ==========================
       JS 
       =========================== --> 
-      <div style="position: absolute; z-index: -10000; top: 0px; left: 0px; right: 0px; height: 3474px;"></div>
+      <div style="position: absolute; z-index: -10000; top: 0px; left: 0px; right: 0px;"></div>
       <div style="clear: both;"></div>
 
     </body>

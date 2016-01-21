@@ -1,5 +1,6 @@
 json.array! @profiles do |profile|
   json.id profile.id
+  json.image_url profile.image_url
   json.full_name profile.full_name
   json.email profile.email
   json.job_function profile.job_function

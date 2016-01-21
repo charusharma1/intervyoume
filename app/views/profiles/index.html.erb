@@ -2,13 +2,16 @@
   <div ng-controller="profilesCtrl" ng-init="setup('<%= params[:job_function] %>')" >
     
     <div>
-    {{profiles.length}} users
+    <!-- <br>
+    Intervyou.me has {{profiles.length}} members.
+    <br>
+    <br> -->
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped magic-button">
       
       <tr>
-        <th><button ng-click="toggleOrder('name')">Name</button></th>
+        <th><button ng-click="toggleOrder('name')" >Name</button></th>
         <th><button ng-click="toggleOrder('email')">Email</button></th>
         <th><button ng-click="toggleOrder('job_function')">Job Function</button></th>
         <th><button ng-click="toggleOrder('company')">Company</button></th>
